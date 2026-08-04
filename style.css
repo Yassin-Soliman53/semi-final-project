@@ -39,15 +39,14 @@ body{
     padding: 30px 10px;
     align-items: start;
 }
-.right-col .left-col{
-    
+.right-col , .left-col{
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
 .card{
-    display: inline-block;
+    background: white;
     flex-direction: column;
     border-radius: 20px;
     width: fit-content;
@@ -56,21 +55,20 @@ body{
     padding:8px 8px 16px 8px;
 
 }
-.left-col .card{
-    margin:30px 60px 30px 0px;
-}
-
 .card .image{
     width: 370px;
     height: 200px;
     border-radius: 20px;
-    height: 400px;
     display: block;
     object-fit: cover;
 }
 
 .left-col {
     left: 0px;
+}
+.right-col {
+  align-items: flex-end;
+  margin-left: 40px; 
 }
 .card-1 { transform: rotate(-10deg) translateX(-10px); }
 .card-2 {transform: rotate(10deg) translateX(10px);}
@@ -95,10 +93,18 @@ body{
 .btn { 
     width: 500px;
     height: 80px;
-    border-radius: 40px;
+    border-radius: 50px;
     font-size: 30px;
     background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
     color: white;
     font-weight: 1000;
-
+    border: none;
+    box-shadow: 0 3px 20px rgba(255, 65, 108, 0.5),
+}
+.btn:hover{
+    transform: scale(1.1) translateY(-2px);
+    background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+}
+.btn:active{
+    transform: scale(0.98) translateY(0);
 }
