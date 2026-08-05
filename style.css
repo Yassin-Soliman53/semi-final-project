@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&display=swap');
 
+@font-face {
+    font-family: 'Determination Mono';
+    src: url('path/to/DeterminationMono.woff2') format('woff2'),
+        url('path/to/DeterminationMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 body{
+    font-family: 'Determination Mono', monospace;
     background-color: #0b0b12;
     background-image: 
     radial-gradient(2px 2px at 600px 30px, white, rgba(0,0,0,0)),
@@ -31,6 +41,13 @@ body{
     min-height: 100vh;
     margin: 0;
 }
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+    pointer-events: none;
+}
+
 .container{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -43,9 +60,9 @@ body{
     align-items: start;
 }
 .right-col , .left-col{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .card{
@@ -70,10 +87,10 @@ body{
     left: 0px;
 }
 .right-col {
-  align-items: flex-end;
-  margin-left: 40px; 
+    align-items: flex-end;
+    margin-left: 40px; 
 }
-.card-1 { transform: rotate(-10deg) translateX(-10px); }
+.card-1 {transform: rotate(-10deg) translateX(-10px);}
 .card-2 {transform: rotate(10deg) translateX(10px);}
 .card-3 {transform: rotate(-10deg)translateX(-10px);}
 .card-4 {transform: rotate(10deg) translateX(10px);}
@@ -83,8 +100,15 @@ body{
 .card-8 {transform: rotate(10deg) translateX(10px);}
 
 .card:hover {
-  transform: scale(1.08) rotate(0deg) ;
-  z-index: 10;
+    transform: scale(1.08) rotate(0deg) ;
+    z-index: 10;
+}
+
+.center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .title-container{
@@ -94,6 +118,19 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.para{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p, h3{
+    font-family: 'Determination Mono', monospace;
+    color: antiquewhite;
 }
 
 h1{
@@ -106,4 +143,28 @@ h2{
     font-family: "Bitcount Prop Single", system-ui;
     font-size: 1.4em;
     color: rgb(156, 159, 162);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.btn{
+    background-color: #2f2c29;
+    max-width: 500px;
+    max-height: 500px;
+    border: #0b0b12 2px solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 0px rgb(223, 215, 202);
+    padding: 15px;
+}
+
+.btn img{
+    margin-top: 20px;
+    width: 300px;
 }
