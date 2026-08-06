@@ -1,26 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Sekuya&display=swap');
 *{
     margin: 0;
     padding :0;
     box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
 }
 body {
-    background-color: rgba(0, 0, 0, 0.874);
-    background-image:radial-gradient(white 1px,transparent 1px);
-    background-size: 50px 50px;
+    background-color: #0b0b12;
+    background-image: 
+    radial-gradient(2px 2px at 600px 30px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 280px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 200px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 600px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 130px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 750px 280px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 80px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 100px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 360px 700px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 600px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 600px, white, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 1000px 400px;
+    min-height: 100vh;
+    margin: 0;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 h1{
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     margin-top: 30px;
     text-shadow: 0 0 10px white;
 }
 .container{
-    background: rgba(30, 30, 35, 0.85);
+    background: rgba(25, 25, 27, 0.612);
     border: 2px solid oklab(100% 0 -0.00011 / 0.635);
     border-radius: 40px;
     padding: 40px;
@@ -40,6 +61,21 @@ h1{
     border-radius: 50px;
     padding: 15px;   
 }
+.search-bar input:hover{
+    transform: scale(1.05);
+}
+.details:hover{
+    transform: scale(1.05);
+}
+img:hover{
+    transform: scale(1.05);
+}
+.details text:hover{
+    transform: scale(1.05);
+}
+h2:hover{
+    transform: scale(1.05);
+}
 .btn-search{
     border: 1px solid rgba(0, 0, 0, 0.7);
     border-radius: 40px;
@@ -47,6 +83,7 @@ h1{
     height: 45px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(174, 30, 30, 0.874);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .weather{
     display: flex;
@@ -60,17 +97,35 @@ h1{
 }
 .details {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     gap: 60px;
     margin: 40px 0px 0px 0px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.098);
     border-radius: 15px;
     padding: 15px 20px;
-    border: 1px solid ;
+    border: 1px solid black;
 }
 .wind ,.dry {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 5px;
+}
+.temp {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.temp:hover{
+    transform: scale(1.05);
+}
+.details text{
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+button:hover {
+    transform: scale(1.05);
 }

@@ -1,0 +1,114 @@
+Global Reset & Dark Theme
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19;
+    background-image: 
+    radial-gradient(2px 2px at 600px 30px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 280px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 200px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 600px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 130px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 750px 280px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 80px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 100px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 360px 700px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 600px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 600px, white, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 1000px 400px;
+    margin: 0;
+    color: rgba(248, 250, 252, 0.842);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+ .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+
+}
+h1 {
+    font-size: 50px;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 15px;
+    font-weight: 700px;
+    margin-bottom: 15px;
+    color: #64748b;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 41, 59, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1000px;
+    padding: 5px;
+}
+
+.search-bar input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding-left: 15px;    
+}
+.search-bar input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.btn-search {
+    background: #0284c7;
+    border: none;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.btn-search:hover {
+    background: #0369a1;
+}
+#cityimg{
+    width:360px;
+    border-radius:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#citysummary{
+    line-height:1.7;
+    color:white;
+    max-width:700px;
+    margin:auto;
+}
+
+#citylink{
+    display:inline-block;
+    margin-top:20px;
+    color: rgb(8, 95, 255);
+}

@@ -11,8 +11,8 @@
 
     <div class="container">
         <div class="search-bar">
-            <input type="text" placeholder="Enter city name">
-            <button class="btn-search">
+            <input type="text" placeholder="Enter city name" id="city">
+            <button class="btn-search" onclick="search()">
                 <svg fill="none" viewBox="0 0 24 24" width="18px" height="18px" stroke="currentColor" stroke-width="2.5">
                     <circle cx="11" cy="11" r="7"></circle>
                     <line x1="16" y1="16" x2="22" y2="22"></line>
@@ -23,18 +23,48 @@
         <div class="weather">
             <h2>Weather Information</h2>
             <img src="images copy/clouds.png" class="weather-img" alt="Weather condition">
-            <h3 id="temp" class="temp">30 ℃</h3>
+            <h3 id="temp" class="temp">0</h3>
             
             <div class="details">
                 <div class="wind">Wind 💨
-                    <p>4%</p>
+                    <p id="windspeed">0</p>
                 </div>
 
                 <div class="dry">Humidity 🌧️
-                    <p>50%</p>
+                    <p id="humidity">0</p>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
+    <script>
+        async function search() {
+            var city = document.querySelector("#city").value.trim()
+            var [lat, lon] = await getCoordinates(city)
+            var weather = await getWeather(lat, lon)
+            document.querySelector("#temp").innerText = weather.temperature_2m + "℃"
+            document.querySelector("#humidity").innerText = weather.relative_humidity_2m + "%"
+            document.querySelector("#windspeed").innerText = weather.wind_speed_10m + "Km/h"
+        }
+        async function getCoordinates(city) {
+            var response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${city}`)
+            var data = await response.json()
+
+            if (data.length > 0) {
+                return [data[0].lat, data[0].lon]
+            }
+        }
+        async function getWeather(lat, lon) {
+            var response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`)
+            var data = await response.json()
+
+            return data.current
+        }
+        document.querySelector(".btn-search").addEventListener("click", search);
+        document.querySelector("#city").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            search();
+        }
+    });
+    </script>
 </body>
 </html>
