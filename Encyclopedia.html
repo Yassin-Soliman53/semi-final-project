@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Encyclopedia</title>
+    <link rel="stylesheet" href="Encyclopedia.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encyclopedia</h1>
+        <h2>Search for a city</h2>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Enter city name..." id="city" autocomplete="off">
+            <button class="btn-search" aria-label="Search">
+                <svg fill="none" viewBox="0 0 24 24" width="18px" height="18px" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="16" y1="16" x2="22" y2="22"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="result" id="result">
+            <img src="" alt="" hidden id="cityimg">
+            <h2 id="citytitle"></h2>
+            <p id="citysummary"></p>
+            <a id="citylink" target="_blank"></a>
+        </div>
+    </div>
+    <script src="Encyclopedia.js"></script>
+</body>
+</html>
