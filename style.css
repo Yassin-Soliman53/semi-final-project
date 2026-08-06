@@ -156,7 +156,6 @@ h2{
     font-size: 1.4em;
     color: rgb(156, 159, 162);
 }
-<<<<<<< HEAD
 
 .button-container{
     display: flex;
@@ -181,6 +180,10 @@ h2{
 .btn img{
     margin-top: 20px;
     width: 300px;
+}
+
+.btn:hover{
+    transform: scale(1.05);
 }
 
 .nickname{
