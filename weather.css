@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    background:linear-gradient(135deg , #00feba,#1570a9);
+}
+label{
+    border-radius: 20px;
+}

@@ -144,6 +144,7 @@ h2{
     font-size: 1.4em;
     color: rgb(156, 159, 162);
 }
+<<<<<<< HEAD
 
 .button-container{
     display: flex;
@@ -168,3 +169,8 @@ h2{
     margin-top: 20px;
     width: 300px;
 }
+=======
+.btn:active{
+    transform: scale(0.98) translateY(0);
+}
+>>>>>>> f4f875d (weather app html)
