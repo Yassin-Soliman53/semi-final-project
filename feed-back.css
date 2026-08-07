@@ -10,7 +10,7 @@
          url('./fonts/DeterminationMono.woff') format('woff');
 }
 body {
-    font-family: 'Determination Mono', monospace, system-ui;
+    font-family: 'DeterminationMono', monospace, system-ui;
     background-color: #0b0b12;
     background-image: 
     radial-gradient(2px 2px at 600px 30px, white, rgba(0,0,0,0)),
@@ -26,10 +26,8 @@ body {
     radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0));
     background-repeat: repeat;
     background-size: 1000px 400px;
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 .form-form {
     background: rgba(15, 23, 42, 0.8);
@@ -38,6 +36,7 @@ body {
     padding: 30px;
     width: 100%;
     max-width: 400px;
+    margin: 60px auto;
 }
 .feedback-form {
     display: flex;
@@ -97,3 +96,48 @@ body {
     background: #0369a1;
     transform: scale(1.05);
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    width: 100%;
+    padding: 12px 24px;
+    background: rgba(20, 20, 30, 0.75);
+    position: sticky;
+    top: 0;
+}
+
+.nav-div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+
+.nav-li a {
+    color: white; 
+    text-decoration: none;
+    font-family: 'DeterminationMono', monospace, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+
+}
+
+.nav-li a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
