@@ -140,3 +140,40 @@ a {
     font-size: 15px;
     margin-bottom: 25px;
 }
+
+.back-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+.btn{
+    background-color: #2f2c29;
+    color: antiquewhite;
+    max-width: 500px;
+    max-height: 500px;
+    font-family: 'Determination Mono', monospace;
+    font-size: 40px;
+    border: #0b0b12 2px solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 0px rgb(223, 215, 202);
+    padding: 40px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+.title-container h1{
+    font-size: 2.5em;
+    font-family: "Bitcount Grid Double", system-ui;
+    color: white;
+}
