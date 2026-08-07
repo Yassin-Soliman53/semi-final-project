@@ -43,9 +43,7 @@ body{
 }
 
 a{
-    color: inherit;
-    text-decoration: inherit;
-    pointer-events: none;
+    text-decoration: none;
 }
 
 .container{
@@ -164,11 +162,14 @@ h2{
     padding: 15px;
 }
 
+.btn img{
+    margin-top: 20px;
+    width: 300px;
+}
 .btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
 }
-
 .result{
     margin-top:30px;
     text-align:center;
