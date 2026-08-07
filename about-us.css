@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Determination Mono';
+    src: url('path/to/DeterminationMono.woff2') format('woff2'),
+         url('path/to/DeterminationMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Determination Mono', monospace;
+    background-color: #0b0b12;
+    background-image: 
+    radial-gradient(2px 2px at 600px 30px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 280px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 200px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 600px 150px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 130px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 750px 280px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 180px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 80px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 100px 100px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 360px 700px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 600px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 500px 500px, white, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 400px 600px, white, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 1000px 400px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+a {
+    text-decoration: none;
+}
+.team-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.card-link {
+    text-decoration: none;
+}
+.card {
+    width: 1100px;
+    height: 1400px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(.2 ,0.8 , 0.3 , 1.3);
+    transform-style: preserve-3d;
+}
+
+.card-link:hover .card-inner{
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    padding: 25px;
+    background-color: rgba(47, 44, 41, 0.737);
+    border: 3px solid #0b0b12;
+    box-shadow: 0px 0px 18px 2px rgb(223, 215, 202);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 1100px;
+    border-radius: 50px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid #0b0b12;
+    margin-bottom: 20px;
+}
+
+.card-front h1 {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 70px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card-front h2.nickname {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 50px;
+    color: rgb(156, 159, 162);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: rgba(36, 34, 32, 0.822);
+    justify-content: center;
+    padding: 40px;
+    gap: 35px;
+}
+
+.card-back h3 {
+    font-family: 'Determination Mono', monospace;
+    font-size: 80px;
+    color: antiquewhite;
+    border-bottom: 3px solid antiquewhite;
+    padding-bottom: 12px;
+}
+
+.card-back ul {
+    list-style: none;
+    text-align: left;
+
+}
+
+.card-back li {
+    font-family: 'Determination Mono', monospace;
+    color: antiquewhite;
+    font-size: 60px;
+    margin-bottom: 25px;
+}
