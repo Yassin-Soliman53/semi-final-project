@@ -8,24 +8,27 @@
 </head>
 <body>
     <div class="form-form">
-        <form class="feedback-form">
+        <form class="feedback-form" id="feedbackForm">
             <h2 class="form-title">Rate Us</h2>
+            
             <div class="cont">
-                <label for="firstname" class="form-label">first name:</label>
-                <input type="text" id="fname" placeholder="e.g\Yassin" class="form-input">
+                <label for="fname" class="form-label">First Name:</label>
+                <input type="text" id="fname" placeholder="e.g. Yassin" class="form-input" required>
             </div>
 
             <div class="cont">
-                <label for="lastname" class="form-label">last name:</label>
-                <input type="text" id="lname"placeholder="e.g\Soliman"class="form-input">
+                <label for="lname" class="form-label">Last Name:</label>
+                <input type="text" id="lname" placeholder="e.g. Soliman" class="form-input" required>
             </div>
 
             <div class="cont">
-                <label for="feedback" class="form-label">your feedback</label>
-                <textarea id="feedback" placeholder="Share your experience" class="form-textarea"></textarea>
+                <label for="feedback" class="form-  label">Your Feedback:</label>
+                <textarea id="feedback" placeholder="Share your experience" class="form-textarea" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">submit rating</button>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">Submit Rating</button>
         </form> 
     </div>
+    <script type="module" src="./feed-back.js"></script>
 </body>
 </html>
