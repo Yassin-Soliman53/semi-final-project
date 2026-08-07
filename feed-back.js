@@ -1,7 +1,7 @@
 // Import Firebase SDK modules directly via CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
+import { db } from "./firebae.js";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAI-MoNiKAk8I-wnXEUzPTFwujxVpRC5FI",
