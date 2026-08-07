@@ -1,4 +1,8 @@
-Global Reset & Dark Theme
+@font-face {
+    font-family: 'DeterminationMono';
+    src: url('./fonts/DeterminationMono.woff2') format('woff2'),
+         url('./fonts/DeterminationMono.woff') format('woff');
+}
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +52,6 @@ h1 {
     font-weight: 1000;
     margin-bottom: 20px;
 }
-
 h2 {
     font-size: 15px;
     font-weight: 700px;
@@ -106,7 +109,6 @@ h2 {
     max-width:700px;
     margin:auto;
 }
-
 #citylink{
     display:inline-block;
     margin-top:20px;

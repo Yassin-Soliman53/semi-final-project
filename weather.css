@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Sekuya&display=swap');
+@font-face {
+    font-family: 'DeterminationMono';
+    src: url('./fonts/DeterminationMono.woff2') format('woff2'),
+         url('./fonts/DeterminationMono.woff') format('woff');
+}
 *{
     margin: 0;
     padding :0;
