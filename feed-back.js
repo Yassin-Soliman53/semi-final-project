@@ -1,6 +1,8 @@
+// Import Firebase SDK modules directly via CDN
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAI-MoNiKAk8I-wnXEUzPTFwujxVpRC5FI",
   authDomain: "semifinal-3b372.firebaseapp.com",
@@ -13,25 +15,31 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
 const form = document.getElementById("feedbackForm");
+const submitBtn = document.getElementById("submitBtn");
 form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Submitting...";
     const firstName = document.getElementById("fname").value;
     const lastName = document.getElementById("lname").value;
     const feedbackText = document.getElementById("feedback").value;
+
     try {
-        await addDoc(collection(db, "feedbacks"), {
+        const docRef = await addDoc(collection(db, "feedbacks"), {
             firstName: firstName,
             lastName: lastName,
             feedback: feedbackText,
-            createdAt: new Date()
+            createdAt: serverTimestamp()
         });
-
+        console.log("Data successfully written to Firestore with ID: ", docRef.id);
         alert("Feedback submitted successfully!");
         form.reset();
     } catch (error) {
-        console.error("Error sending feedback: ", error);
-        alert("Failed to send feedback. Check console for details.");
+        console.error("Error submitting feedback to Firestore: ", error);
+        alert("Failed to send feedback: " + error.message);
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Submit Rating";
     }
 });
