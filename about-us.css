@@ -48,7 +48,7 @@ a {
 }
 .team-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -56,9 +56,10 @@ a {
 .card-link {
     text-decoration: none;
 }
+
 .card {
-    width: 1100px;
-    height: 1400px;
+    width: 500px;
+    height: 600px
 }
 
 .card-inner {
@@ -85,42 +86,43 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .profile-photo {
-    width: 100%;
-    height: 1100px;
-    border-radius: 50px;
+    width: 80%;
+    height: 450px;
     object-fit: cover;
     border-radius: 18px;
     border: 2px solid #0b0b12;
-    margin-bottom: 20px;
-}
-
-.card-front h1 {
-    font-family: "Bitcount Grid Double", system-ui;
-    font-size: 70px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.card-front h2.nickname {
-    font-family: "Bitcount Prop Single", system-ui;
-    font-size: 50px;
-    color: rgb(156, 159, 162);
+    margin-bottom: 0; 
 }
 
 .card-back {
     transform: rotateY(180deg);
     background-color: rgba(36, 34, 32, 0.822);
-    justify-content: center;
     padding: 40px;
-    gap: 35px;
+    gap: 20px;
+}
+
+.card-front h1 {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 32px;
+    color: white;
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+
+.card-front h2.nickname {
+    font-family: "Bitcount Prop Single", system-ui;
+    font-size: 25px;
+    color: rgb(156, 159, 162);
 }
 
 .card-back h3 {
     font-family: 'Determination Mono', monospace;
-    font-size: 80px;
+    font-size: 25px;
     color: antiquewhite;
     border-bottom: 3px solid antiquewhite;
     padding-bottom: 12px;
@@ -135,6 +137,43 @@ a {
 .card-back li {
     font-family: 'Determination Mono', monospace;
     color: antiquewhite;
-    font-size: 60px;
+    font-size: 15px;
     margin-bottom: 25px;
+}
+
+.back-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+.btn{
+    background-color: #2f2c29;
+    color: antiquewhite;
+    max-width: 500px;
+    max-height: 500px;
+    font-family: 'Determination Mono', monospace;
+    font-size: 40px;
+    border: #0b0b12 2px solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 0px rgb(223, 215, 202);
+    padding: 40px;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px
+}
+
+.title-container h1{
+    font-size: 2.5em;
+    font-family: "Bitcount Grid Double", system-ui;
+    color: white;
 }
