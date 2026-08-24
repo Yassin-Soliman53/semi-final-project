@@ -174,3 +174,46 @@ h2{
     margin-top:30px;
     text-align:center;
 }
+.card {
+    width: 100%;
+    max-width: 370px;
+}
+.card .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 370 / 200;
+} 
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .left-col, .right-col {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+    .card-1, .card-2, .card-3, .card-4,
+    .card-5, .card-6, .card-7, .card-8 {
+        transform: rotate(0deg) translateX(0px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+    }
+    .center-col {
+        order: 1;
+    }
+
+    .left-col, .right-col {
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+    }
+    
+}
