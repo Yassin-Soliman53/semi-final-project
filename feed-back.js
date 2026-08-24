@@ -1,5 +1,5 @@
 import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-import { db } from "./firebae"; 
+import { db } from "./firebae.js"; 
 
 const form = document.getElementById("feedbackForm");
 const submitBtn = document.getElementById("submitBtn");
